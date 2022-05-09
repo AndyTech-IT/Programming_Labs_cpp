@@ -1,7 +1,6 @@
 #include "LR_6.h"
 
 #if LR == 6
-#if REPORT
 
 #include "Deposit.h"
 void General_1()
@@ -294,11 +293,10 @@ void General_2()
 	if (textbooks)
 		delete[] textbooks;
 }
-#endif
 
 void ALL()
 {
-#if REPORT
+#if REPORT == false
 	cout << "Общее задание 1" << endl;
 	General_1();
 

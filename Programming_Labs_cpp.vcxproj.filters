@@ -7,6 +7,9 @@
     <Filter Include="Main">
       <UniqueIdentifier>{605747f2-0698-449f-9e0b-46cdba0201e5}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ЛР 7">
+      <UniqueIdentifier>{a3484520-1873-4a0d-bfb1-e2e27e2440cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LR_6.h">
