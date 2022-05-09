@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ЛР 6">
+      <UniqueIdentifier>{7668bd24-7e51-4399-a2a2-bcdbafa98c15}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Main">
+      <UniqueIdentifier>{605747f2-0698-449f-9e0b-46cdba0201e5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="LR_6.h">
+      <Filter>ЛР 6</Filter>
+    </ClInclude>
+    <ClInclude Include="Deposit.h">
+      <Filter>ЛР 6</Filter>
+    </ClInclude>
+    <ClInclude Include="Printed_Edition.h">
+      <Filter>ЛР 6</Filter>
+    </ClInclude>
+    <ClInclude Include="Magazine.h">
+      <Filter>ЛР 6</Filter>
+    </ClInclude>
+    <ClInclude Include="Book.h">
+      <Filter>ЛР 6</Filter>
+    </ClInclude>
+    <ClInclude Include="Textbook.h">
+      <Filter>ЛР 6</Filter>
+    </ClInclude>
+    <ClInclude Include="Main.h">
+      <Filter>Main</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LR_6.cpp">
+      <Filter>ЛР 6</Filter>
+    </ClCompile>
+    <ClCompile Include="Printed_Edition.cpp">
+      <Filter>ЛР 6</Filter>
+    </ClCompile>
+    <ClCompile Include="Magazine.cpp">
+      <Filter>ЛР 6</Filter>
+    </ClCompile>
+    <ClCompile Include="Deposit.cpp">
+      <Filter>ЛР 6</Filter>
+    </ClCompile>
+    <ClCompile Include="Book.cpp">
+      <Filter>ЛР 6</Filter>
+    </ClCompile>
+    <ClCompile Include="Textbook.cpp">
+      <Filter>ЛР 6</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Main</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>
