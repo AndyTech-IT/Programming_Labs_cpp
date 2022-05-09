@@ -141,19 +141,25 @@
   <ItemGroup>
     <ClInclude Include="Book.h" />
     <ClInclude Include="Deposit.h" />
+    <ClInclude Include="Goods.h" />
     <ClInclude Include="LR_6.h" />
+    <ClInclude Include="LR_7.h" />
     <ClInclude Include="Magazine.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="Printed_Edition.h" />
+    <ClInclude Include="SetArray.h" />
     <ClInclude Include="Textbook.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Book.cpp" />
     <ClCompile Include="Deposit.cpp" />
+    <ClCompile Include="Goods.cpp" />
     <ClCompile Include="LR_6.cpp" />
+    <ClCompile Include="LR_7.cpp" />
     <ClCompile Include="Magazine.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Printed_Edition.cpp" />
+    <ClCompile Include="SetArray.cpp" />
     <ClCompile Include="Textbook.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

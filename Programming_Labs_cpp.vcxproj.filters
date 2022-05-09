@@ -33,6 +33,15 @@
     <ClInclude Include="Main.h">
       <Filter>Main</Filter>
     </ClInclude>
+    <ClInclude Include="SetArray.h">
+      <Filter>ЛР 7</Filter>
+    </ClInclude>
+    <ClInclude Include="LR_7.h">
+      <Filter>ЛР 7</Filter>
+    </ClInclude>
+    <ClInclude Include="Goods.h">
+      <Filter>ЛР 7</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LR_6.cpp">
@@ -55,6 +64,15 @@
     </ClCompile>
     <ClCompile Include="Main.cpp">
       <Filter>Main</Filter>
+    </ClCompile>
+    <ClCompile Include="LR_7.cpp">
+      <Filter>ЛР 7</Filter>
+    </ClCompile>
+    <ClCompile Include="SetArray.cpp">
+      <Filter>ЛР 7</Filter>
+    </ClCompile>
+    <ClCompile Include="Goods.cpp">
+      <Filter>ЛР 7</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
