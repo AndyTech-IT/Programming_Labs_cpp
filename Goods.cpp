@@ -44,7 +44,7 @@ USHORT Goods::Get_Weight() const
 void Goods::Set_Title(const string title)
 {
     if (title != "")
-        _title = title
+        _title = title;
 }
 
 void Goods::Set_Weight(const USHORT weight)
