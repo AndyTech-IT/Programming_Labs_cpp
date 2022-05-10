@@ -42,6 +42,21 @@
     <ClInclude Include="Goods.h">
       <Filter>ЛР 7</Filter>
     </ClInclude>
+    <ClInclude Include="Food.h">
+      <Filter>ЛР 7</Filter>
+    </ClInclude>
+    <ClInclude Include="Fresh_Food.h">
+      <Filter>ЛР 7</Filter>
+    </ClInclude>
+    <ClInclude Include="Canned_Food.h">
+      <Filter>ЛР 7</Filter>
+    </ClInclude>
+    <ClInclude Include="Electronic_Component.h">
+      <Filter>ЛР 7</Filter>
+    </ClInclude>
+    <ClInclude Include="Electronic.h">
+      <Filter>ЛР 7</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LR_6.cpp">
@@ -72,6 +87,21 @@
       <Filter>ЛР 7</Filter>
     </ClCompile>
     <ClCompile Include="Goods.cpp">
+      <Filter>ЛР 7</Filter>
+    </ClCompile>
+    <ClCompile Include="Food.cpp">
+      <Filter>ЛР 7</Filter>
+    </ClCompile>
+    <ClCompile Include="Canned_Food.cpp">
+      <Filter>ЛР 7</Filter>
+    </ClCompile>
+    <ClCompile Include="Fresh_Food.cpp">
+      <Filter>ЛР 7</Filter>
+    </ClCompile>
+    <ClCompile Include="Electronic.cpp">
+      <Filter>ЛР 7</Filter>
+    </ClCompile>
+    <ClCompile Include="Electronic_Component.cpp">
       <Filter>ЛР 7</Filter>
     </ClCompile>
   </ItemGroup>

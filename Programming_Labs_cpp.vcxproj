@@ -140,7 +140,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Book.h" />
+    <ClInclude Include="Canned_Food.h" />
     <ClInclude Include="Deposit.h" />
+    <ClInclude Include="Electronic.h" />
+    <ClInclude Include="Electronic_Component.h" />
+    <ClInclude Include="Food.h" />
+    <ClInclude Include="Fresh_Food.h" />
     <ClInclude Include="Goods.h" />
     <ClInclude Include="LR_6.h" />
     <ClInclude Include="LR_7.h" />
@@ -152,7 +157,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Book.cpp" />
+    <ClCompile Include="Canned_Food.cpp" />
     <ClCompile Include="Deposit.cpp" />
+    <ClCompile Include="Electronic.cpp" />
+    <ClCompile Include="Electronic_Component.cpp" />
+    <ClCompile Include="Food.cpp" />
+    <ClCompile Include="Fresh_Food.cpp" />
     <ClCompile Include="Goods.cpp" />
     <ClCompile Include="LR_6.cpp" />
     <ClCompile Include="LR_7.cpp" />
