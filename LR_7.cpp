@@ -238,10 +238,12 @@ void General_2()
 
 #include "Person.h"
 #include "Individual_Person.h"
+#include "Entity_Person.h"
 void Individual()
 {
 	Individual_Person p;
-	cout << p;
+	Entity_Person e;
+	cout << p << e;
 }
 
 void ALL()
