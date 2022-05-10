@@ -2,6 +2,8 @@
 #include "Main.h"
 #include "Food.h"
 
+#if LR == 7
+
 class Canned_Food : public Food
 {
 private:
@@ -37,3 +39,4 @@ public:
 	bool Is_Opened() const;
 };
 
+#endif

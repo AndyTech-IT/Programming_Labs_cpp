@@ -1,5 +1,7 @@
 #include "Electronic.h"
 
+#if LR == 7
+
 USHORT Electronic::_objects_count = 0;
 
 USHORT Electronic::Get_Electronic_Count()
@@ -40,3 +42,5 @@ string Electronic::Get_Category()
 {
 	return _category;
 }
+
+#endif

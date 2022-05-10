@@ -1,5 +1,8 @@
 #pragma once
 #include "Electronic.h"
+
+#if LR == 7
+
 class Electronic_Component : public Electronic
 {
 private:
@@ -25,3 +28,4 @@ public:
 	string Get_Component_Of();
 };
 
+#endif

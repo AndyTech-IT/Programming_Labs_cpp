@@ -10,71 +10,80 @@
     <Filter Include="ЛР 7">
       <UniqueIdentifier>{a3484520-1873-4a0d-bfb1-e2e27e2440cc}</UniqueIdentifier>
     </Filter>
+    <Filter Include="ЛР 6\General 1">
+      <UniqueIdentifier>{53d17be3-4af6-4c8c-9da7-a9f5cfce764e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ЛР 6\General 2">
+      <UniqueIdentifier>{bfd7d1b3-cc9f-4f20-b31d-105e62e919f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ЛР 7\General 1">
+      <UniqueIdentifier>{6a85583a-394d-47bb-8aa2-2551e8a555c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ЛР 7\General 2">
+      <UniqueIdentifier>{3b38b3b2-f669-4275-8772-62f47c02aa76}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ЛР 7\Individual">
+      <UniqueIdentifier>{5dc0cb95-d9f3-4ee1-be16-a14819545bca}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="LR_6.h">
       <Filter>ЛР 6</Filter>
     </ClInclude>
-    <ClInclude Include="Deposit.h">
-      <Filter>ЛР 6</Filter>
-    </ClInclude>
-    <ClInclude Include="Printed_Edition.h">
-      <Filter>ЛР 6</Filter>
-    </ClInclude>
-    <ClInclude Include="Magazine.h">
-      <Filter>ЛР 6</Filter>
-    </ClInclude>
-    <ClInclude Include="Book.h">
-      <Filter>ЛР 6</Filter>
-    </ClInclude>
-    <ClInclude Include="Textbook.h">
-      <Filter>ЛР 6</Filter>
-    </ClInclude>
     <ClInclude Include="Main.h">
       <Filter>Main</Filter>
-    </ClInclude>
-    <ClInclude Include="SetArray.h">
-      <Filter>ЛР 7</Filter>
     </ClInclude>
     <ClInclude Include="LR_7.h">
       <Filter>ЛР 7</Filter>
     </ClInclude>
-    <ClInclude Include="Goods.h">
-      <Filter>ЛР 7</Filter>
+    <ClInclude Include="Deposit.h">
+      <Filter>ЛР 6\General 1</Filter>
     </ClInclude>
-    <ClInclude Include="Food.h">
-      <Filter>ЛР 7</Filter>
+    <ClInclude Include="Magazine.h">
+      <Filter>ЛР 6\General 2</Filter>
     </ClInclude>
-    <ClInclude Include="Fresh_Food.h">
-      <Filter>ЛР 7</Filter>
+    <ClInclude Include="Printed_Edition.h">
+      <Filter>ЛР 6\General 2</Filter>
+    </ClInclude>
+    <ClInclude Include="Textbook.h">
+      <Filter>ЛР 6\General 2</Filter>
+    </ClInclude>
+    <ClInclude Include="Book.h">
+      <Filter>ЛР 6\General 2</Filter>
+    </ClInclude>
+    <ClInclude Include="SetArray.h">
+      <Filter>ЛР 7\General 1</Filter>
     </ClInclude>
     <ClInclude Include="Canned_Food.h">
-      <Filter>ЛР 7</Filter>
-    </ClInclude>
-    <ClInclude Include="Electronic_Component.h">
-      <Filter>ЛР 7</Filter>
+      <Filter>ЛР 7\General 2</Filter>
     </ClInclude>
     <ClInclude Include="Electronic.h">
-      <Filter>ЛР 7</Filter>
+      <Filter>ЛР 7\General 2</Filter>
+    </ClInclude>
+    <ClInclude Include="Electronic_Component.h">
+      <Filter>ЛР 7\General 2</Filter>
+    </ClInclude>
+    <ClInclude Include="Food.h">
+      <Filter>ЛР 7\General 2</Filter>
+    </ClInclude>
+    <ClInclude Include="Fresh_Food.h">
+      <Filter>ЛР 7\General 2</Filter>
+    </ClInclude>
+    <ClInclude Include="Goods.h">
+      <Filter>ЛР 7\General 2</Filter>
+    </ClInclude>
+    <ClInclude Include="Individual_Person.h">
+      <Filter>ЛР 7\Individual</Filter>
+    </ClInclude>
+    <ClInclude Include="Person.h">
+      <Filter>ЛР 7\Individual</Filter>
+    </ClInclude>
+    <ClInclude Include="Entity_Person.h">
+      <Filter>ЛР 7\Individual</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LR_6.cpp">
-      <Filter>ЛР 6</Filter>
-    </ClCompile>
-    <ClCompile Include="Printed_Edition.cpp">
-      <Filter>ЛР 6</Filter>
-    </ClCompile>
-    <ClCompile Include="Magazine.cpp">
-      <Filter>ЛР 6</Filter>
-    </ClCompile>
-    <ClCompile Include="Deposit.cpp">
-      <Filter>ЛР 6</Filter>
-    </ClCompile>
-    <ClCompile Include="Book.cpp">
-      <Filter>ЛР 6</Filter>
-    </ClCompile>
-    <ClCompile Include="Textbook.cpp">
       <Filter>ЛР 6</Filter>
     </ClCompile>
     <ClCompile Include="Main.cpp">
@@ -83,26 +92,47 @@
     <ClCompile Include="LR_7.cpp">
       <Filter>ЛР 7</Filter>
     </ClCompile>
-    <ClCompile Include="SetArray.cpp">
-      <Filter>ЛР 7</Filter>
+    <ClCompile Include="Deposit.cpp">
+      <Filter>ЛР 6\General 1</Filter>
     </ClCompile>
-    <ClCompile Include="Goods.cpp">
-      <Filter>ЛР 7</Filter>
+    <ClCompile Include="Magazine.cpp">
+      <Filter>ЛР 6\General 2</Filter>
     </ClCompile>
-    <ClCompile Include="Food.cpp">
-      <Filter>ЛР 7</Filter>
+    <ClCompile Include="Printed_Edition.cpp">
+      <Filter>ЛР 6\General 2</Filter>
+    </ClCompile>
+    <ClCompile Include="Textbook.cpp">
+      <Filter>ЛР 6\General 2</Filter>
+    </ClCompile>
+    <ClCompile Include="Book.cpp">
+      <Filter>ЛР 6\General 2</Filter>
     </ClCompile>
     <ClCompile Include="Canned_Food.cpp">
-      <Filter>ЛР 7</Filter>
-    </ClCompile>
-    <ClCompile Include="Fresh_Food.cpp">
-      <Filter>ЛР 7</Filter>
+      <Filter>ЛР 7\General 2</Filter>
     </ClCompile>
     <ClCompile Include="Electronic.cpp">
-      <Filter>ЛР 7</Filter>
+      <Filter>ЛР 7\General 2</Filter>
     </ClCompile>
     <ClCompile Include="Electronic_Component.cpp">
-      <Filter>ЛР 7</Filter>
+      <Filter>ЛР 7\General 2</Filter>
+    </ClCompile>
+    <ClCompile Include="Food.cpp">
+      <Filter>ЛР 7\General 2</Filter>
+    </ClCompile>
+    <ClCompile Include="Fresh_Food.cpp">
+      <Filter>ЛР 7\General 2</Filter>
+    </ClCompile>
+    <ClCompile Include="Goods.cpp">
+      <Filter>ЛР 7\General 2</Filter>
+    </ClCompile>
+    <ClCompile Include="Individual_Person.cpp">
+      <Filter>ЛР 7\Individual</Filter>
+    </ClCompile>
+    <ClCompile Include="Person.cpp">
+      <Filter>ЛР 7\Individual</Filter>
+    </ClCompile>
+    <ClCompile Include="Entity_Person.cpp">
+      <Filter>ЛР 7\Individual</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

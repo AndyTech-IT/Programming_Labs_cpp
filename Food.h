@@ -1,7 +1,8 @@
 #pragma once
 #include "Main.h"
-
 #include "Goods.h"
+
+#if LR == 7
 
 class Food : public Goods
 {
@@ -25,3 +26,4 @@ public:
 	virtual USHORT Get_ShelfLife_Time() const = 0;
 };
 
+#endif

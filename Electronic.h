@@ -2,6 +2,8 @@
 #include "Main.h"
 #include "Goods.h"
 
+#if LR == 7
+
 class Electronic : public Goods
 {
 private:
@@ -27,3 +29,4 @@ public:
 	string Get_Category();
 };
 
+#endif

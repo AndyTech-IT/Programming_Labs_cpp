@@ -1,5 +1,7 @@
 #include "Goods.h"
 
+#if LR == 7
+
 USHORT Goods::_objects_count = 0;
 
 USHORT Goods::Get_Goods_Count()
@@ -51,3 +53,5 @@ void Goods::Set_Weight(const USHORT weight)
 {
     _weight = weight;
 }
+
+#endif

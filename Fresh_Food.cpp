@@ -1,5 +1,7 @@
 #include "Fresh_Food.h"
 
+#if LR == 7
+
 USHORT Fresh_Food::_objects_count = 0;
 
 USHORT Fresh_Food::Get_Fresh_Food_Count()
@@ -40,3 +42,5 @@ USHORT Fresh_Food::Get_ShelfLife_Time() const
 {
     return _shelflife_time;
 }
+
+#endif

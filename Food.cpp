@@ -1,5 +1,7 @@
 #include "Food.h"
 
+#if LR == 7
+
 USHORT Food::_objects_count = 0;
 
 USHORT Food::Get_Food_Count()
@@ -32,3 +34,5 @@ Food::~Food()
 {
     _objects_count--;
 }
+
+#endif

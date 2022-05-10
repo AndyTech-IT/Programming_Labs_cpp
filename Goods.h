@@ -1,6 +1,8 @@
 #pragma once
 #include "Main.h"
 
+#if LR == 7
+
 enum class Goods_Comand
 {
 	Exit,
@@ -47,3 +49,4 @@ protected:
 	void Set_Weight(const USHORT weight);
 };
 
+#endif

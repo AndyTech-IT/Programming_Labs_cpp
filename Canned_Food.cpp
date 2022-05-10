@@ -1,5 +1,7 @@
 #include "Canned_Food.h"
 
+#if LR == 7
+
 USHORT Canned_Food::_objects_count = 0;
 
 USHORT Canned_Food::Get_Canned_Food_Count()
@@ -57,3 +59,5 @@ bool Canned_Food::Is_Opened() const
 {
     return _is_closed == false;
 }
+
+#endif

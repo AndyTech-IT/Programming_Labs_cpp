@@ -2,6 +2,8 @@
 #include "Main.h"
 #include "Food.h"
 
+#if LR == 7
+
 class Fresh_Food : public Food
 {
 private:
@@ -27,3 +29,4 @@ public:
 	USHORT Get_ShelfLife_Time() const override;
 };
 
+#endif

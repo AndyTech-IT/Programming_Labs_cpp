@@ -236,9 +236,12 @@ void General_2()
 
 }
 
+#include "Person.h"
+#include "Individual_Person.h"
 void Individual()
 {
-
+	Individual_Person p;
+	cout << p;
 }
 
 void ALL()
@@ -246,15 +249,13 @@ void ALL()
 #	if REPORT == false
 
 	cout << "Общее задание 1" << endl;
-	//General_1();
+	General_1();
 
-	system("pause");
 	system("cls");
 
 	cout << "Общее задание 2" << endl;
 	General_2();
 
-	system("pause");
 	system("cls");
 
 #	endif

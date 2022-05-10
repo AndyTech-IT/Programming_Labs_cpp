@@ -1,7 +1,5 @@
 #pragma once
-
 #include "Main.h"
-
 #include "Printed_Edition.h"
 
 #if LR == 6

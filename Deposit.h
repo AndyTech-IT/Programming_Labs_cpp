@@ -2,6 +2,7 @@
 #include "Main.h"
 
 #if LR == 6
+
 enum class Deposit_Command
 {
 	Exit,

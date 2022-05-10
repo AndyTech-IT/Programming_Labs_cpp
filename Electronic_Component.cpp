@@ -1,5 +1,7 @@
 #include "Electronic_Component.h"
 
+#if LR == 7
+
 USHORT Electronic_Component::_objects_count = 0;
 
 USHORT Electronic_Component::Get_Electronic_Component_Count()
@@ -40,3 +42,5 @@ string Electronic_Component::Get_Component_Of()
 {
     return _component_of;
 }
+
+#endif

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
@@ -144,13 +144,16 @@
     <ClInclude Include="Deposit.h" />
     <ClInclude Include="Electronic.h" />
     <ClInclude Include="Electronic_Component.h" />
+    <ClInclude Include="Entity_Person.h" />
     <ClInclude Include="Food.h" />
     <ClInclude Include="Fresh_Food.h" />
     <ClInclude Include="Goods.h" />
+    <ClInclude Include="Individual_Person.h" />
     <ClInclude Include="LR_6.h" />
     <ClInclude Include="LR_7.h" />
     <ClInclude Include="Magazine.h" />
     <ClInclude Include="Main.h" />
+    <ClInclude Include="Person.h" />
     <ClInclude Include="Printed_Edition.h" />
     <ClInclude Include="SetArray.h" />
     <ClInclude Include="Textbook.h" />
@@ -161,15 +164,17 @@
     <ClCompile Include="Deposit.cpp" />
     <ClCompile Include="Electronic.cpp" />
     <ClCompile Include="Electronic_Component.cpp" />
+    <ClCompile Include="Entity_Person.cpp" />
     <ClCompile Include="Food.cpp" />
     <ClCompile Include="Fresh_Food.cpp" />
     <ClCompile Include="Goods.cpp" />
+    <ClCompile Include="Individual_Person.cpp" />
     <ClCompile Include="LR_6.cpp" />
     <ClCompile Include="LR_7.cpp" />
     <ClCompile Include="Magazine.cpp" />
     <ClCompile Include="Main.cpp" />
+    <ClCompile Include="Person.cpp" />
     <ClCompile Include="Printed_Edition.cpp" />
-    <ClCompile Include="SetArray.cpp" />
     <ClCompile Include="Textbook.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

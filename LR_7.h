@@ -17,4 +17,8 @@ class Canned_Food;
 class Electronic;
 class Electronic_Component;
 
+class Person;
+class Individual_Person;
+class Entity_Person;
+
 #endif
