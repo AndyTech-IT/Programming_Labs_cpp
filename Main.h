@@ -7,7 +7,7 @@
 
 using namespace std;
 #define LR 7
-#define REPORT true
+#define REPORT false
 
 #define MIN_PUP_YEAR 1800
 #define DEFAULT_STR "<blank>"

@@ -53,6 +53,29 @@ void Person::Chainge_RegistrationAdress(string adress)
         _registration_adress = adress;
 }
 
+void Person::WriteData(FILE*& f)
+{
+    int i;
+    BYTE b;
+    if (typeid(*this).name() == typeid(Person).name())
+    {
+        b = 0;
+        fwrite(&b, sizeof(BYTE), 1, f);
+    }
+
+    i = _name.length();
+    fwrite(&i, sizeof(int), 1, f);
+    fwrite(&_name, sizeof(char), i, f);
+
+    i = _T_I_N.length();
+    fwrite(&i, sizeof(int), 1, f);
+    fwrite(&_T_I_N, sizeof(char), i, f);
+
+    i = _registration_adress.length();
+    fwrite(&i, sizeof(int), 1, f);
+    fwrite(&_registration_adress, sizeof(char), i, f);
+}
+
 ostream& operator<<(ostream& os, Person& p)
 {
     os << p.Get_Detail();

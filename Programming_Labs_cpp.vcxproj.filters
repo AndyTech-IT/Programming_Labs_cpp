@@ -81,6 +81,12 @@
     <ClInclude Include="Entity_Person.h">
       <Filter>ЛР 7\Individual</Filter>
     </ClInclude>
+    <ClInclude Include="Person_ListItem.h">
+      <Filter>ЛР 7\Individual</Filter>
+    </ClInclude>
+    <ClInclude Include="Person_List.h">
+      <Filter>ЛР 7\Individual</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="LR_6.cpp">
@@ -132,6 +138,12 @@
       <Filter>ЛР 7\Individual</Filter>
     </ClCompile>
     <ClCompile Include="Entity_Person.cpp">
+      <Filter>ЛР 7\Individual</Filter>
+    </ClCompile>
+    <ClCompile Include="Person_ListItem.cpp">
+      <Filter>ЛР 7\Individual</Filter>
+    </ClCompile>
+    <ClCompile Include="Person_List.cpp">
       <Filter>ЛР 7\Individual</Filter>
     </ClCompile>
   </ItemGroup>

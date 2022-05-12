@@ -30,6 +30,7 @@ public:
 
 public:
 	virtual string Get_Detail() const = 0;
+	virtual void WriteData(FILE*& f);
 };
 
 ostream& operator<<(ostream& os, Person& p);

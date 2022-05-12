@@ -154,6 +154,8 @@
     <ClInclude Include="Magazine.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="Person.h" />
+    <ClInclude Include="Person_List.h" />
+    <ClInclude Include="Person_ListItem.h" />
     <ClInclude Include="Printed_Edition.h" />
     <ClInclude Include="SetArray.h" />
     <ClInclude Include="Textbook.h" />
@@ -174,6 +176,8 @@
     <ClCompile Include="Magazine.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Person.cpp" />
+    <ClCompile Include="Person_List.cpp" />
+    <ClCompile Include="Person_ListItem.cpp" />
     <ClCompile Include="Printed_Edition.cpp" />
     <ClCompile Include="Textbook.cpp" />
   </ItemGroup>
