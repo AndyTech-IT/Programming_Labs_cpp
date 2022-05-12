@@ -4,6 +4,9 @@
 
 class Entity_Person : public Person
 {
+public:
+	static bool Is_MyData(BYTE first_byte);
+
 protected:
 	string _M_S_R_N;
 	string _C_O_R;
@@ -23,6 +26,9 @@ public:
 	string Get_MSRN() const;
 	string Get_COR() const;
 	USHORT Get_BIC() const;
+
+	void WriteData(FILE*& f) const override;
+	void ReadData(FILE*& f) override;
 
 public:
 	string Get_Detail() const override;

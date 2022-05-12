@@ -7,6 +7,11 @@ USHORT Person::Get_Person_Count()
     return _objects_count;
 }
 
+bool Person::Is_MyData(BYTE first_byte)
+{
+    return first_byte == (BYTE)Data_Marker::Is_Person_Data;
+}
+
 Person::Person(const string name, const string TIN, const string adress)
 {
     _name = name;
@@ -53,13 +58,13 @@ void Person::Chainge_RegistrationAdress(string adress)
         _registration_adress = adress;
 }
 
-void Person::WriteData(FILE*& f)
+void Person::WriteData(FILE*& f) const
 {
     int i;
     BYTE b;
     if (typeid(*this).name() == typeid(Person).name())
     {
-        b = 0;
+        b = (BYTE)Data_Marker::Is_Person_Data;
         fwrite(&b, sizeof(BYTE), 1, f);
     }
 
@@ -74,6 +79,19 @@ void Person::WriteData(FILE*& f)
     i = _registration_adress.length();
     fwrite(&i, sizeof(int), 1, f);
     fwrite(&_registration_adress, sizeof(char), i, f);
+}
+
+void Person::ReadData(FILE*& f)
+{
+    int i;
+    fread(&i, sizeof(int), 1, f);
+    fread(&_name, sizeof(char), i, f);
+
+    fread(&i, sizeof(int), 1, f);
+    fread(&_T_I_N, sizeof(char), i, f);
+
+    fread(&i, sizeof(int), 1, f);
+    fread(&_registration_adress, sizeof(char), i, f);
 }
 
 ostream& operator<<(ostream& os, Person& p)

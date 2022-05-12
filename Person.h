@@ -1,12 +1,20 @@
 #pragma once
 #include "Main.h"
 
+enum class Data_Marker 
+{
+	Is_Person_Data,
+	Is_Individual_Person_Data,
+	Is_Entity_Person_Data,
+};
+
 class Person
 {
 private:
 	static USHORT _objects_count;
 public:
 	static USHORT Get_Person_Count();
+	static bool Is_MyData(BYTE first_byte);
 
 protected:
 	string _name;
@@ -30,7 +38,8 @@ public:
 
 public:
 	virtual string Get_Detail() const = 0;
-	virtual void WriteData(FILE*& f);
+	virtual void WriteData(FILE*& f) const;
+	virtual void ReadData(FILE*& f);
 };
 
 ostream& operator<<(ostream& os, Person& p);

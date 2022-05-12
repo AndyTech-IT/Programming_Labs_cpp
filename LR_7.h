@@ -17,8 +17,13 @@ class Canned_Food;
 class Electronic;
 class Electronic_Component;
 
+enum class Data_Marker;
+
 class Person;
 class Individual_Person;
 class Entity_Person;
+
+class Person_List;
+class Person_ListItem;
 
 #endif

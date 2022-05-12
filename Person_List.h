@@ -2,10 +2,12 @@
 #include "Main.h"
 #include "Person.h"
 #include "Person_ListItem.h"
+#include "Individual_Person.h"
+#include "Entity_Person.h"
 
 class Person_List
 {
-	friend void Save(Person_List list, string filename);
+	friend void Save(Person_List& list, string filename);
 	friend void Load(Person_List& list, string filename);
 	friend ostream& operator << (ostream& os, const Person_List& list);
 private:
@@ -13,11 +15,17 @@ private:
 	USHORT _count;
 
 public:
+	Person_List(Person* first = NULL);
+	Person_List(const Person_List& copy);
+	Person_List(const Person_List* copy);
+	~Person_List();
+
+public:
 	void Add(Person* p);
 	void Remove(USHORT index);
 
 	void Sort();
-	Person_ListItem* Find(string name);
+	Person* Find(string name) const;
 
 public:
 	Person* operator [](USHORT index) const;
@@ -25,6 +33,6 @@ public:
 };
 
 ostream& operator << (ostream& os, const Person_List& list);
-void Save(Person_List list, string filename);
+void Save(Person_List& list, string filename);
 void Load(Person_List& list, string filename);
 

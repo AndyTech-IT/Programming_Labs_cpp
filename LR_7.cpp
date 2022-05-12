@@ -239,11 +239,20 @@ void General_2()
 #include "Person.h"
 #include "Individual_Person.h"
 #include "Entity_Person.h"
+#include "Person_List.h"
+#include "Person_ListItem.h"
+
 void Individual()
 {
-	Individual_Person p;
-	Entity_Person e;
-	cout << p << e;
+	Person_List list;
+	cout << list << endl << endl;
+	list.Add(new Individual_Person());
+	list.Add(new Entity_Person());
+	cout << list << endl << endl;
+	Save(list, "test.txt");
+	cout << list << endl << endl;
+	Load(list, "test.txt");
+	cout << list << endl << endl;
 }
 
 void ALL()

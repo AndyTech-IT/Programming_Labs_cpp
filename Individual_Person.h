@@ -3,6 +3,9 @@
 
 class Individual_Person : public Person
 {
+public:
+	static bool Is_MyData(BYTE first_byte);
+
 protected:
 	string _secondname;
 	bool _has_middlename;
@@ -25,9 +28,12 @@ public:
 	string Get_Phone() const;
 
 public:
-	void Chainge_Phone();
-	void Chainge_Secondname();
-	void Chainge_Middlename();
+	void Chainge_Phone(string phone);
+	void Chainge_Secondname(string secondname);
+	void Chainge_Middlename(string middlename);
+
+	void WriteData(FILE*& f) const override;
+	void ReadData(FILE*& f) override;
 
 public:
 	string Get_Detail() const override;
