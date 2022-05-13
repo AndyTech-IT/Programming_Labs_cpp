@@ -20,3 +20,7 @@ using namespace std;
 const auto RusCharset = 1251;
 void ALL();
 int main();
+
+void Write_String(string data, FILE*& f);
+
+string Read_String(FILE*& f);

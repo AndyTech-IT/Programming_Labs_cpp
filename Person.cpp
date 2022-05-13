@@ -20,10 +20,10 @@ Person::Person(const string name, const string TIN, const string adress)
     _objects_count++;
 }
 
-Person::Person(const Person& copy): Person(copy._name, copy._T_I_N, copy._registration_adress)
+Person::Person(const Person& copy) : Person(copy._name, copy._T_I_N, copy._registration_adress)
 { }
 
-Person::Person(const Person * copy) : Person(copy->_name, copy->_T_I_N, copy->_registration_adress)
+Person::Person(const Person* copy) : Person(copy->_name, copy->_T_I_N, copy->_registration_adress)
 { }
 
 Person::~Person()
@@ -61,6 +61,7 @@ void Person::Chainge_RegistrationAdress(string adress)
 void Person::WriteData(FILE*& f) const
 {
     int i;
+    char* temp;
     BYTE b;
     if (typeid(*this).name() == typeid(Person).name())
     {
@@ -68,30 +69,23 @@ void Person::WriteData(FILE*& f) const
         fwrite(&b, sizeof(BYTE), 1, f);
     }
 
-    i = _name.length();
-    fwrite(&i, sizeof(int), 1, f);
-    fwrite(&_name, sizeof(char), i, f);
+    Write_String(_name, f);
 
-    i = _T_I_N.length();
-    fwrite(&i, sizeof(int), 1, f);
-    fwrite(&_T_I_N, sizeof(char), i, f);
+    Write_String(_T_I_N, f);
 
-    i = _registration_adress.length();
-    fwrite(&i, sizeof(int), 1, f);
-    fwrite(&_registration_adress, sizeof(char), i, f);
+    Write_String(_registration_adress, f);
 }
 
 void Person::ReadData(FILE*& f)
 {
-    int i;
-    fread(&i, sizeof(int), 1, f);
-    fread(&_name, sizeof(char), i, f);
+    int i = 0;
+    char* temp;
 
-    fread(&i, sizeof(int), 1, f);
-    fread(&_T_I_N, sizeof(char), i, f);
+    _name = Read_String(f);
 
-    fread(&i, sizeof(int), 1, f);
-    fread(&_registration_adress, sizeof(char), i, f);
+    _T_I_N = Read_String(f);
+
+    _registration_adress = Read_String(f);
 }
 
 ostream& operator<<(ostream& os, Person& p)

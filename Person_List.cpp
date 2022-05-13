@@ -55,11 +55,13 @@ void Person_List::Add(Person* p)
     if (_count == 0)
     {
         _count = 1;
-        _begin = _end = new Person_ListItem[_count]{ p };
+        _begin = _end = new Person_ListItem(p);
         return;
     }
 
-    _end = _end->Next = new Person_ListItem(p);
+    _end->Next = new Person_ListItem(p);
+    _end->Next->Previous = _end;
+    _end = _end->Next;
     _count++;
 }
 

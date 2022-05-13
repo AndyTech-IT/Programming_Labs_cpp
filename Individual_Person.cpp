@@ -7,9 +7,9 @@ bool Individual_Person::Is_MyData(BYTE first_byte)
 
 Individual_Person::Individual_Person
 (
-	const string name, const string TIN, const string adress, 
+	const string name, const string TIN, const string adress,
 	const string secondname, const bool has_middlename, const string middlename, const string phone
-): Person(name, TIN, adress)
+) : Person(name, TIN, adress)
 {
 	_secondname = secondname;
 	_has_middlename = has_middlename;
@@ -21,7 +21,7 @@ Individual_Person::Individual_Person(const Individual_Person& copy)
 	:Individual_Person(copy._name, copy._T_I_N, copy._registration_adress, copy._secondname, copy._has_middlename, copy._middlename, copy._personal_phone)
 { }
 
-Individual_Person::Individual_Person(const Individual_Person * copy)
+Individual_Person::Individual_Person(const Individual_Person* copy)
 	: Individual_Person(copy->_name, copy->_T_I_N, copy->_registration_adress, copy->_secondname, copy->_has_middlename, copy->_middlename, copy->_personal_phone)
 { }
 
@@ -69,21 +69,15 @@ void Individual_Person::WriteData(FILE*& f) const
 	}
 	Person::WriteData(f);
 
-	i = _secondname.length();
-	fwrite(&i, sizeof(int), 1, f);
-	fwrite(&_secondname, sizeof(char), i, f);
+	Write_String(_secondname, f);
 
 	fwrite(&_has_middlename, sizeof(bool), 1, f);
 	if (_has_middlename)
 	{
-		i = _middlename.length();
-		fwrite(&i, sizeof(int), 1, f);
-		fwrite(&_middlename, sizeof(char), i, f);
+		Write_String(_middlename, f);
 	}
 
-	i = _personal_phone.length();
-	fwrite(&i, sizeof(int), 1, f);
-	fwrite(&_personal_phone, sizeof(char), i, f);
+	Write_String(_personal_phone, f);
 }
 
 void Individual_Person::ReadData(FILE*& f)
@@ -91,18 +85,15 @@ void Individual_Person::ReadData(FILE*& f)
 	int i;
 	Person::ReadData(f);
 
-	fread(&i, sizeof(int), 1, f);
-	fread(&_secondname, sizeof(char), i, f);
+	_secondname = Read_String(f);
 
 	fread(&_has_middlename, sizeof(bool), 1, f);
 	if (_has_middlename)
 	{
-		fread(&i, sizeof(int), 1, f);
-		fread(&_has_middlename, sizeof(char), i, f);
+		_middlename = Read_String(f);
 	}
 
-	fread(&i, sizeof(int), 1, f);
-	fread(&_personal_phone, sizeof(char), i, f);
+	_personal_phone = Read_String(f);
 }
 
 string Individual_Person::Get_Detail() const
@@ -112,5 +103,6 @@ string Individual_Person::Get_Detail() const
 	result += "    - ФИО:\t" + _secondname + ' ' + _name + ' ' + Get_Middlename() + '\n';
 	result += "    - Телефон:\t" + _personal_phone + '\n';
 	result += "    - ИНН:\t" + _T_I_N + '\n';
+	result += "    - Адрес:\t" + _registration_adress + '\n';
 	return result;
 }

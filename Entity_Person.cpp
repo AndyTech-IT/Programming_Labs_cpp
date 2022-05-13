@@ -7,7 +7,7 @@ bool Entity_Person::Is_MyData(BYTE first_byte)
 
 Entity_Person::Entity_Person
 (
-	const string name, const string TIN, const string adress, 
+	const string name, const string TIN, const string adress,
 	const string MSRN, const string COR, const string BIC
 ) : Person(name, TIN, adress)
 {
@@ -51,17 +51,11 @@ void Entity_Person::WriteData(FILE*& f) const
 	}
 	Person::WriteData(f);
 
-	i = _M_S_R_N.length();
-	fwrite(&i, sizeof(int), 1, f);
-	fwrite(&_M_S_R_N, sizeof(char), i, f);
+	Write_String(_M_S_R_N, f);
 
-	i = _C_O_R.length();
-	fwrite(&i, sizeof(int), 1, f);
-	fwrite(&_C_O_R, sizeof(char), i, f);
+	Write_String(_C_O_R, f);
 
-	i = _B_I_C.length();
-	fwrite(&i, sizeof(int), 1, f);
-	fwrite(&_B_I_C, sizeof(char), i, f);
+	Write_String(_B_I_C, f);
 }
 
 void Entity_Person::ReadData(FILE*& f)
@@ -69,24 +63,22 @@ void Entity_Person::ReadData(FILE*& f)
 	int i;
 	Person::ReadData(f);
 
-	fread(&i, sizeof(int), 1, f);
-	fread(&_M_S_R_N, sizeof(char), i, f);
+	_M_S_R_N = Read_String(f);
 
-	fread(&i, sizeof(int), 1, f);
-	fread(&_C_O_R, sizeof(char), i, f);
+	_C_O_R = Read_String(f);
 
-	fread(&i, sizeof(int), 1, f);
-	fread(&_B_I_C, sizeof(char), i, f);
+	_B_I_C = Read_String(f);
 }
 
 string Entity_Person::Get_Detail() const
 {
 	string result;
 	result += "Şğèäè÷åñêîå Ëèöî:" + string("\n");
-	result += "    - Îğã-èÿ:\t"	+ _name + '\n';
-	result += "    - ÎÃĞÍ:\t"	+ _M_S_R_N + '\n';
-	result += "    - ÈÍÍ:\t"	+ _T_I_N + '\n';
-	result += "    - ÊÏÏ:\t"	+ _C_O_R + '\n';
-	result += "    - ÁÈÊ:\t"	+ _B_I_C + '\n';
+	result += "    - Îğã-ÿ:\t" + _name + '\n';
+	result += "    - ÎÃĞÍ:\t" + _M_S_R_N + '\n';
+	result += "    - ÈÍÍ:\t" + _T_I_N + '\n';
+	result += "    - ÊÏÏ:\t" + _C_O_R + '\n';
+	result += "    - ÁÈÊ:\t" + _B_I_C + '\n';
+	result += "    - Àäğåñ:\t" + _registration_adress + '\n';
 	return result;
 }
