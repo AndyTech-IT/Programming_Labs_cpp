@@ -249,10 +249,24 @@ void Individual()
 	list.Add(new Individual_Person("Иван", "123145151355", "Улица Дом 3 Квартира 2", "Иванов", true, "Иванович", "89146359804"));
 	list.Add(new Entity_Person("ООО Компания", "43562351", "Улица Дом 5 Строение Б", "124124", "34254625", "567324254"));
 	cout << list << endl << endl;
+
 	Save(list, "test.txt");
-	cout << list << endl << endl;
 	Load(list, "test.txt");
 	cout << list << endl << endl;
+
+	list.Add(new Individual_Person("1", "1", "1", "1", true, "1", "1"));
+	list.Add(new Individual_Person("2", "2", "2", "2", true, "2", "2"));
+	list.Add(new Individual_Person("Я", "Я", "Я", "Я", true, "Я", "Я"));
+	list.Sort();
+	cout << list << endl << endl;
+
+	list.Remove(0);
+	cout << list << endl << endl;
+
+	list[0]->Chainge_Name("1");
+	((Individual_Person*)list[0])->Chainge_Middlename("1");
+	((Individual_Person*)list[0])->Chainge_Secondname("1");
+	cout << *list[0] << *list[-1] << endl;
 }
 
 void ALL()

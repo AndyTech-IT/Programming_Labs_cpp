@@ -50,6 +50,18 @@ Person_List::~Person_List()
     }
 }
 
+Person_ListItem* Person_List::Get_Item(USHORT index) const
+{
+    if (index >= _count)
+        return NULL;
+
+    Person_ListItem* curent = _begin;
+    for (int i = 0; i < index; i++)
+        curent = curent->Next;
+
+    return curent;
+}
+
 void Person_List::Add(Person* p)
 {
     if (_count == 0)
@@ -71,9 +83,24 @@ void Person_List::Remove(USHORT index)
         return;
 
     _count--;
-    delete this->operator [](index);
+    Person_ListItem* item =  Get_Item(index);
+
     if (_count == 0)
+    {
         _begin = _end = NULL;
+        delete item;
+        return;
+    }
+
+    if (item == _begin)
+    {
+        _begin = item->Next;
+    }
+    if (item == _end)
+        _end = item->Previous;
+
+    delete item;
+
 }
 
 void Person_List::Sort()
@@ -95,6 +122,7 @@ void Person_List::Sort()
                 p1->Set_Data(p2->Get_Data());
                 p2->Set_Data(temp);
             }
+            curent = curent->Next;
         }
     }
 }
@@ -112,15 +140,17 @@ Person* Person_List::Find(string name) const
     return NULL;
 }
 
-Person* Person_List::operator[](USHORT index) const
+Person* Person_List::operator[](int index) const
 {
-    if (index >= _count)
+    if (index < 0)
+    {
+        index += _count;
+    }
+
+    if (index < 0 || index >= _count)
         return NULL;
 
-    Person_ListItem* curent = _begin;
-    for (int i = 0; i < index; i++)
-        curent = curent->Next;
-    return curent->Get_Data();
+    return Get_Item(index)->Get_Data();
 }
 
 Person_List::operator int() const
